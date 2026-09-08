@@ -4,7 +4,7 @@
   input_mass = output_metal + dross + emission_mass, ≥98% closure (G12 KPI), kotoba-datomic-anchored
   (G2 audit log). records_collected → mass_balance_computed → kotoba_datomic_anchored → record_emitted.
   BalanceState dataclass → string-keyed map under \"balance_state\"."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (defn- s* [state] (get state "balance_state" {}))
 

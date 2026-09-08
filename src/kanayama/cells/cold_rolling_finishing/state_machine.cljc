@@ -3,7 +3,7 @@
   temper to 0.27 mm can-stock coil + Migaki surface inspection: hot_band_loaded → cold_passes_complete
   → temper_complete → surface_inspection_complete → coil_qualified → record_emitted. ColdRollingState
   dataclass → string-keyed map under \"cold_rolling_state\"."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (defn- s* [state] (get state "cold_rolling_state" {}))
 

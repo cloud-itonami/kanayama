@@ -2,7 +2,7 @@
   "1:1 port of cells/dc_casting/state_machine.py (ADR-2605252400 L4). Direct-Chill slab casting
   (typical Al slab 1m × 0.6m × 8m) followed by homogenization 540–580°C × 12–24h. CastingState
   dataclass → string-keyed map under \"casting_state\"."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (defn- s* [state] (get state "casting_state" {}))
 

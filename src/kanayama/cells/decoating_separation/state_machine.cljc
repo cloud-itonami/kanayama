@@ -2,7 +2,7 @@
   "1:1 port of cells/decoating_separation/state_machine.py (ADR-2605252400 L2). ~500°C rotary
   de-coater (lacquer/paint burnoff + off-gas capture/filter), rotary shredder, magnetic + eddy-
   current separation. DecoatingState dataclass → string-keyed map under \"decoating_state\"."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (defn- s* [state] (get state "decoating_state" {}))
 

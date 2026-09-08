@@ -4,7 +4,7 @@
   日本大気汚染防止法 + EN 12457 leachate: pfc_scanned → so2_nox_scanned → particulate_dioxin_scanned →
   leachate_tested → record_emitted, with overallAccept = (every stage accept is true). EmissionsState
   dataclass → string-keyed map under \"emissions_state\"."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (defn- s* [state] (get state "emissions_state" {}))
 
