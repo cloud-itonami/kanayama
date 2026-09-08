@@ -2,7 +2,7 @@
   "kanayama — constitutional-gate conformance tests. Substrate-native Clojure (ADR-2606160842); 1:1 port of pruned test_charter_gates.py."
   (:require [clojure.test :refer [deftest is run-tests]]
             [clojure.set :as set]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.edn :as edn]))
 
 (def ^:private actor-dir (.getCanonicalFile (java.io.File. ".")))
@@ -42,23 +42,23 @@
   (let [n (get-in (manifest) ["nonGoals" "goals"])]
     (doseq [key ["N1" "N2" "N3" "N4"]]
       (is (contains? n key) (str "recycling-only: non-goal " key " must be declared")))
-    (is (or (str/includes? (str/lower-case (get n "N1")) "primary mining")
-            (str/includes? (str/lower-case (get n "N1")) "bauxite")) "N1 must exclude primary mining")
-    (is (or (str/includes? (str/lower-case (get n "N2")) "hall-héroult")
-            (str/includes? (str/lower-case (get n "N2")) "primary")) "N2 must exclude primary smelting")
-    (is (or (str/includes? (str/lower-case (get n "N3")) "munition")
-            (str/includes? (str/lower-case (get n "N3")) "cartridge")) "N3 must exclude munitions/cartridge brass")
-    (is (or (str/includes? (str/lower-case (get n "N4")) "nuclear")
-            (str/includes? (str/lower-case (get n "N4")) "radio")) "N4 must exclude nuclear/radiological feedstock")))
+    (is (or (str/includes? (str/lower (get n "N1")) "primary mining")
+            (str/includes? (str/lower (get n "N1")) "bauxite")) "N1 must exclude primary mining")
+    (is (or (str/includes? (str/lower (get n "N2")) "hall-héroult")
+            (str/includes? (str/lower (get n "N2")) "primary")) "N2 must exclude primary smelting")
+    (is (or (str/includes? (str/lower (get n "N3")) "munition")
+            (str/includes? (str/lower (get n "N3")) "cartridge")) "N3 must exclude munitions/cartridge brass")
+    (is (or (str/includes? (str/lower (get n "N4")) "nuclear")
+            (str/includes? (str/lower (get n "N4")) "radio")) "N4 must exclude nuclear/radiological feedstock")))
 
 ;; ── G2/G12/G13 quantitative discipline is stated ──
 (deftest test-mass-balance-recovery-energy-gates
   (let [g (get-in (manifest) ["constitutionalGates" "gates"])]
     (is (or (str/includes? (get g "G2") "98%") (str/includes? (get g "G2") "≥98")) "G2 must state ≥98% mass-balance closure")
     (is (or (str/includes? (get g "G12") "95%") (str/includes? (get g "G12") "≥95")) "G12 must state ≥95% recovery rate")
-    (is (or (str/includes? (str/lower-case (get g "G13")) "captive coal")
-            (str/includes? (str/lower-case (get g "G13")) "petroleum coke")
-            (str/includes? (str/lower-case (get g "G13")) "petcoke")) "G13 must prohibit captive coal / petcoke")))
+    (is (or (str/includes? (str/lower (get g "G13")) "captive coal")
+            (str/includes? (str/lower (get g "G13")) "petroleum coke")
+            (str/includes? (str/lower (get g "G13")) "petcoke")) "G13 must prohibit captive coal / petcoke")))
 
 ;; ── G8 emissions / leachate regulatory basis enumerated ──
 (deftest test-g8-emissions-regulatory-basis

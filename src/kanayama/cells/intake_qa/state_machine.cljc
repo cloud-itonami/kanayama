@@ -3,7 +3,7 @@
   moisture + magnetic-impurity detection; the contamination thresholds gate downstream commitment.
   The IntakeState dataclass is modelled as a string-keyed map under \"intake_state\" (mirroring the
   Python __dict__), phase as its enum value-string."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 ;; IntakePhase enum values: init / bale_weighed / contamination_scanned / accept_or_reject_decided / record_emitted
 (defn- s* [state] (get state "intake_state" {}))

@@ -2,7 +2,7 @@
   "1:1 port of cells/melting_furnace/state_machine.py (ADR-2605252400 L3). Twin-chamber Al furnace
   ~720°C with N₂/Cl₂ degas + salt-flux refining + alloy adjust to 3xxx/5xxx; witness quorum ≥2 robots
   per pour (G4). MeltingState dataclass → string-keyed map under \"melting_state\"."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (defn- s* [state] (get state "melting_state" {}))
 

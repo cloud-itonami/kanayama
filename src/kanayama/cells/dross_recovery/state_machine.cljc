@@ -3,7 +3,7 @@
   cake processing → secondary-Al recovery + K-salt recycled; standalone disposal is a §2(g) violation
   so this cell enforces the G14 closed loop (landfill residue → 0). DrossState dataclass → string-
   keyed map under \"dross_state\"."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (defn- s* [state] (get state "dross_state" {}))
 

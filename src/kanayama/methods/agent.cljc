@@ -4,7 +4,7 @@
   quorum ≥2, G7 USDC + 10% tithe (stops at :intent). Pure compute; the Murakumo llm host binding is
   unused here (the omitted leg). (The 9 Pregel cells remain separate canonical CLJC modules; this is the
   agent layer only.)"
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def TITHE-BPS 1000)
 (def ^:private RECOVERY-RATE-MIN-PCT 95.0)

@@ -2,7 +2,7 @@
   "1:1 port of cells/hot_rolling/state_machine.py (ADR-2605252400 L5a). Multi-pass hot rolling ~500°C,
   slab → hot band ~3 mm: reheat → 4-pass rough → 4-pass finish (passes accumulate) → coil → record.
   HotRollingState dataclass → string-keyed map under \"hot_rolling_state\"."
-  (:require [clojure.string]))
+  (:require [kotoba.lang.text]))
 
 (defn- s* [state] (get state "hot_rolling_state" {}))
 
