@@ -10,7 +10,7 @@ recovers what they cast).
 | Lexicons | ✅ 8 canonical semantic EDN under `data/lex`; Datomic projections under `data/lex-datoms`; JSON snapshots under `wire/lex` |
 | Cells | ✅ 9 canonical CLJC state machines under `src/kanayama/cells` |
 | Manifest | ✅ canonical `manifest.edn` — gates G1–G14 + non-goals N1–N8 |
-| Tests | ✅ `bb test`: **55 tests / 176 assertions / 0 failures** (2026-07-18) |
+| Tests | ✅ `kbb -M:test`: **55 tests / 176 assertions / 0 failures** (2026-07-18) |
 | Methods | 🟡 canonical CLJC agent + Murakumo planner; live metallurgy = R1 |
 | Audit | ✅ EDN syntax, canonical/wire lexicon names, wire boundary, deprecated artifacts |
 
