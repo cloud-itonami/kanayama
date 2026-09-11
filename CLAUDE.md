@@ -157,8 +157,8 @@ was an R0 framework leg (`.solve()` raised `RuntimeError` until R1) and was not 
 **Run the suite** (bb / clojure.test):
 
 ```sh
-bb test
-bb audit
+kbb -M:test
+kbb -M:audit
 ```
 
 Covers the Murakumo boundary, method gates, and all 9 cell state-machine namespaces.

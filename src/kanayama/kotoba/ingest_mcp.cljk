@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; kanayama 金山 — ingest seed.edn into a live kotoba node (cljc port of ingest_mcp.py).
 ;; ADR-2605252400.
 (ns kanayama.kotoba.ingest-mcp
