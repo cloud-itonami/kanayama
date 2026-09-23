@@ -3,11 +3,11 @@
   (:require [kotoba.test :refer [deftest is run-tests]]
             [clojure.set :as set]
             [kotoba.lang.text :as str]
-            [clojure.edn :as edn]))
+            [kotoba.lang.edn :as edn]))
 
 (def ^:private actor-dir (.getCanonicalFile (java.io.File. ".")))
 (def ^:private lexdir (java.io.File. actor-dir "data/lex"))
-(defn- manifest [] (:actor/manifest (clojure.edn/read-string (slurp (java.io.File. actor-dir "manifest.edn")))))
+(defn- manifest [] (:actor/manifest (kotoba.lang.edn/read-string (slurp (java.io.File. actor-dir "manifest.edn")))))
 (defn- lex [name] (edn/read-string (slurp (java.io.File. lexdir (str name ".edn")))))
 
 (defn- known [doc field]
