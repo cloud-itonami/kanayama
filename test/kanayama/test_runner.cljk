@@ -1,5 +1,5 @@
 (ns kanayama.test-runner
-  (:require [clojure.test :as t]
+  (:require [kotoba.test :as t]
             [kanayama.murakumo-test]
             [kanayama.methods.test-agent]
             [kanayama.methods.test-charter-gates]

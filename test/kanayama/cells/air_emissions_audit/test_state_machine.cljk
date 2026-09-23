@@ -3,7 +3,7 @@
   so2_nox_scanned → particulate_dioxin_scanned → leachate_tested → record_emitted: phase/pct
   progression, the per-stage accept flags + the all-stages overallAccept fold (incl. a fail path
   where one stage is forced rejected), and the emitted airEmissionsAuditRecord."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.cells.air-emissions-audit.state-machine :as sm]))
 
 (defn- run-all [s0]

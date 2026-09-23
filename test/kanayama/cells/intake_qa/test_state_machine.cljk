@@ -3,7 +3,7 @@
   full L1 sequence init → bale_weighed → contamination_scanned → accept_or_reject_decided →
   record_emitted: phase/completionPct progression, the contamination accept/reject thresholds, and
   the emitted intakeRecord."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.cells.intake-qa.state-machine :as sm]))
 
 (deftest test-full-sequence-progresses-to-100

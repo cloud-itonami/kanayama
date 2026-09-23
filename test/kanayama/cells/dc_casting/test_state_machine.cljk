@@ -2,7 +2,7 @@
   "Tests for the kanayama dc_casting state machine (L4). Drives mold_prepared → dc_casting_complete
   → homogenization_complete → inspection_passed → record_emitted: phase/pct progression, slab
   geometry/mass, and the emitted dcCastingAttestation."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.cells.dc-casting.state-machine :as sm]))
 
 (deftest test-full-sequence-progresses-to-100

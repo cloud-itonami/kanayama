@@ -2,7 +2,7 @@
   "Tests for the kanayama hot_rolling state machine (L5a). Drives slab_reheated → rough_roll_complete
   → finish_roll_complete → coiled → record_emitted: phase/pct progression, the 8-pass schedule
   (4 rough + 4 finish accumulated), final 3 mm gauge, and the emitted rollingAttestation."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.cells.hot-rolling.state-machine :as sm]))
 
 (deftest test-full-sequence-progresses-to-100

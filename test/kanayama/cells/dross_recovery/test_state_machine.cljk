@@ -2,7 +2,7 @@
   "Tests for the kanayama dross_recovery state machine (L3 cross-cutting + G14). Drives dross_collected
   → salt_cake_processed → secondary_al_recovered → k_salt_recycled → record_emitted: phase/pct
   progression, the G14 closed-loop accept flag (landfill residue < 0.5), and the emitted record."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.cells.dross-recovery.state-machine :as sm]))
 
 (deftest test-full-sequence-progresses-to-100

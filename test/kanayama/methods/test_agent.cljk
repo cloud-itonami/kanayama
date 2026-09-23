@@ -2,7 +2,7 @@
   "kanayama 金 — canonical agent gate tests.
   Offline: mass-balance audit (G2), KPI caps (G12), witness quorum (G4), USDC + tithe settlement
   (G7/G11/G15)."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.methods.agent :as agent]))
 
 (defn- blocked? [r] (= true (get r "blocked")))

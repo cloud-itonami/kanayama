@@ -2,7 +2,7 @@
   "Tests for the kanayama melting_furnace state machine (L3). Drives charged → melt_held → degas →
   alloy_adjusted → pour_witnessed → record_emitted: phase/pct progression, witness quorum ≥2 (G4),
   and the emitted meltingAttestation."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.cells.melting-furnace.state-machine :as sm]))
 
 (deftest test-full-sequence-progresses-to-100
