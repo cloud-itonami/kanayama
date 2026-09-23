@@ -2,7 +2,7 @@
   "Tests for the kanayama decoating_separation state machine (L2). Drives the full sequence
   decoater_heated → lacquer_burnoff → shred → magnetic → eddy_current → record_emitted: phase/
   completionPct progression and the emitted decoatingAttestation."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.cells.decoating-separation.state-machine :as sm]))
 
 (deftest test-full-sequence-progresses-to-100

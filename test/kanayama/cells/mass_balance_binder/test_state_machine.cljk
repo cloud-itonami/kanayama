@@ -4,7 +4,7 @@
   progression, the mass-balance arithmetic (input = output_metal + net_dross + emission, closure %
   vs the 98% G12 KPI, parity-pinned to Python round(_, 2) = 98.79), and the emitted
   massBalanceBinderRecord with its kotoba-datomic anchor."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.cells.mass-balance-binder.state-machine :as sm]))
 
 (deftest test-full-sequence-progresses-to-100

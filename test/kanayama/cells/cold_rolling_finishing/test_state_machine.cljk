@@ -3,7 +3,7 @@
   cold_passes_complete → temper_complete → surface_inspection_complete → coil_qualified →
   record_emitted: phase/pct progression, the 4-pass cold schedule to 0.27 mm + H19 temper, and
   the emitted coilQualificationRecord."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kanayama.cells.cold-rolling-finishing.state-machine :as sm]))
 
 (deftest test-full-sequence-progresses-to-100
