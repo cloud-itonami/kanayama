@@ -1,4 +1,4 @@
-# com-etzhayyim-kanayama — CLAUDE.md
+# com-etzhayyim-kanayama — AGENTS.md
 
 ## Identity
 
@@ -168,4 +168,4 @@ Covers the Murakumo boundary, method gates, and all 9 cell state-machine namespa
 - `manifest.edn` — DID + cell registry + gates + non-goals
 - `/90-docs/adr/2605252400-kanayama-circular-metallurgy-r0.md` — Master ADR
 - `/orgs/etzhayyim/com-etzhayyim-watatsumi/README.md` — Elemental sibling (水)
-- `/CLAUDE.md` — Religious-corp status table row 46
+- `/AGENTS.md` — Religious-corp status table row 46

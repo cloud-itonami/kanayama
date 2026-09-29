@@ -110,7 +110,7 @@ Schema details deferred to R1 ADR.
 ## References
 
 - `/90-docs/adr/2605252400-kanayama-circular-metallurgy-r0.md` — Master ADR
-- `/CLAUDE.md` — Religious-corp status table row 46
+- `/AGENTS.md` — Religious-corp status table row 46
 
 ## Standalone layout and verification
 
